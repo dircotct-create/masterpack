@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos esenciales para el navegador -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTER PACK: Sublima & Emprende - El Sistema 360° para la Rentabilidad</title>
+    <!-- Carga de Tailwind CSS CDN para usar clases de estilo directamente -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración para usar la fuente Inter (limpia y moderna) -->
+    <style>
+        :root {
+            --color-principal: #FF5733;
+            /* Color Naranja/Corál para acentos (puedes cambiarlo) */
+            --color-secundario: #1a202c;
+            /* Color oscuro para fondo */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            /* Color de texto principal */
+            background-color: #f7fafc;
+            /* Fondo general muy claro */
+        }
+
+        /* Estilos personalizados para los botones de llamada a la acción */
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(255, 87, 51, 0.5), 0 4px 6px -2px rgba(255, 87, 51, 0.25);
+            /* Animación ligera al pasar el ratón */
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 15px 20px -5px rgba(255, 87, 51, 0.7), 0 6px 8px -3px rgba(255, 87, 51, 0.3);
+        }
+
+        /* Estilo para el fondo del banner de urgencia */
+        .banner-urgencia {
+            background-color: #dc2626;
+            /* Fondo rojo fuerte */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================================================================================= -->
+    <!-- Sección de Cabecera Fija (Sticky Header) con Botón de Compra -->
+    <!-- ================================================================================= -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-md">
+        <div class="max-w-7xl mx-auto p-4 flex justify-between items-center">
+            <!-- Logo actualizado a logo.png -->
+            <div class="flex items-center space-x-2">
+                <!-- REFERENCIA DE IMAGEN: logo.png -->
+                <img src="logo.png"
+                    onerror="this.onerror=null;this.src='https://placehold.co/150x40/FF5733/ffffff?text=MASTER+PACK';"
+                    alt="Logo MASTER PACK" class="h-8 md:h-10 rounded-lg">
+            </div>
+            <!-- Botón de Compra Rápida - Flota en el tope -->
+            <!-- ********* ENLACE A WHATSAPP ********* -->
+            <a href="https://api.whatsapp.com/send?phone=573202641496&text=%C2%A1S%C3%8D!%20Quiero%20Acceder%20para%20Calcular%20Bien%20y%20Emprender.%20Vengo%20de%20la%20Landing%20Page%20y%20estoy%20listo%2Fa%20para%20obtener%20el%20Master%20Pack%20de%20%2449.000."
+                class="bg-indigo-600 text-white text-sm font-bold py-2 px-4 rounded-full hover:bg-indigo-700 transition duration-300 shadow-lg">
+                ¡Quiero Mi Acceso!
+            </a>
+        </div>
+    </header>
+
+    <!-- ================================================================================= -->
+    <!-- Sección de Hero (Gancho Principal) -->
+    <!-- ================================================================================= -->
+    <section class="bg-white py-12 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Título Atractivo (el titular modificado) -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
+                MASTER PACK: Sublima & Emprende
+            </h1>
+            <p class="mt-4 text-xl sm:text-2xl text-red-600 font-bold">
+                ¡OLVÍDATE DE DISEÑAR Y DE ADIVINAR PRECIOS!
+            </p>
+            <p class="mt-2 text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto">
+                Activa el <strong>Sistema 360</strong> y asegura la <STRong>Rentabilidad</STRong> de cada uno de tus
+                productos
+                personalizados.
+            </p>
+
+            <!-- Contenedor de Valor y Llamada a la Acción -->
+            <div class="mt-10 max-w-3xl mx-auto p-6 bg-red-50 border-4 border-red-500 rounded-xl shadow-2xl">
+                <!-- Beneficio superior y urgente -->
+                <p class="text-3xl font-bold text-red-600 mb-4">
+                    🎉 ¡Incluye la Calculadora Pro Exclusiva GRATIS! 🎉
+                </p>
+                <!-- Botón de Llamada a la Acción Principal (CTA solicitado) -->
+                <!-- ********* ENLACE A WHATSAPP ********* -->
+                <a href="https://api.whatsapp.com/send?phone=573202641496&text=Estoy%20listo%2Fa%20para%20obtener%20el%20Master%20Pack."
+                    target="_blank" rel="noopener noreferrer"
+                    class="cta-button inline-flex items-center justify-center px-10 py-4 border border-transparent text-xl font-extrabold rounded-full text-white bg-red-500 hover:bg-red-600">
+                    SÍ, ¡QUIERO MI MASTER PACK Y LA CALCULADORA!
+                </a>
+
+                <p class="mt-3 text-sm text-gray-700">Acceso Inmediato.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- Sección de Contador de Urgencia (Escasez/Tiempo Limitado) -->
+    <!-- ================================================================================= -->
+    <section class="banner-urgencia py-4 text-white shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-center items-center">
+            <p class="text-lg md:text-xl font-bold mb-2 md:mb-0 md:mr-6 text-center">
+                OFERTA ESPECIAL VÁLIDA SOLO POR:
+            </p>
+            <div id="contador" class="flex space-x-3 text-2xl md:text-3xl font-extrabold">
+                <!-- El JavaScript llenará estos elementos -->
+                <span class="bg-white text-red-600 p-2 rounded-lg" id="horas">00</span>
+                <span class="p-2">:</span>
+                <span class="bg-white text-red-600 p-2 rounded-lg" id="minutos">00</span>
+                <span class="p-2">:</span>
+                <span class="bg-white text-red-600 p-2 rounded-lg" id="segundos">00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- Sección 1: El Dolor y la Solución (Foco en la Calculadora) -->
+    <!-- ================================================================================= -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-3xl font-bold text-gray-900 mb-12">
+                ¿Por qué estás Perdiendo Dinero en cada Producto?
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Bloque de Texto: El Problema -->
+                <div>
+                    <ul class="space-y-6 text-lg text-gray-600">
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 text-3xl mr-3 text-red-500">❌</span>
+                            <p><strong>Cobras "A Ojo":</strong> No tienes un costo real por tinta, papel y tiempo de
+                                mano de obra. Estás regalando tu trabajo.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 text-3xl mr-3 text-red-500">❌</span>
+                            <p><strong>Diseños Genéricos:</strong> Usas packs masivos, tus productos se ven iguales a
+                                los de la competencia y te toca bajar el precio.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 text-3xl mr-3 text-red-500">❌</span>
+                            <p><strong>Falta de Estrategia:</strong> Sabes sublimar, pero no sabes **vender**, costear o
+                                crear una marca. Te falta el $\text{30\%}$ del negocio.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bloque de Imagen/Video de Solución (Calculadora) -->
+                <div class="relative p-6 bg-yellow-100 rounded-xl shadow-xl border-4 border-yellow-400">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Nuestra Solución: La C.P.C. Pro</h3>
+                    <!-- REFERENCIA DE IMAGEN: demo.jpg -->
+                    <img src="demo.jpg"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFD700/000000?text=DEMO+CALCULADORA';"
+                        alt="Demo de la Calculadora Pro" class="w-full rounded-lg shadow-lg">
+                    <p class="mt-4 text-center text-xl font-semibold text-gray-700">
+                        Calcula tu Precio Perfecto en 5 Clicks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- Sección 2: Desglose de Valor MASTER PACK (Los 4 Pilares) -->
+    <!-- ================================================================================= -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-4xl font-extrabold text-gray-900 mb-12">
+                Lo que Recibes: El Sistema MASTER PACK 360
+            </h2>
+
+            <div class="space-y-12">
+
+                <!-- PILAR 1: Calculadora (Énfasis Máximo) -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-red-500 transform hover:scale-[1.01] transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-red-500 mr-4">🧮</span>
+                        <h3 class="text-3xl font-bold text-gray-900">PILAR 1: LA CALCULADORA PRO DE COSTOS Y PRECIOS
+                        </h3>
+                        <span class="ml-auto text-red-600 font-extrabold text-xl">VALOR EXCLUSIVO</span>
+                    </div>
+                    <p class="text-lg text-gray-600">
+                        La herramienta que transforma tu hobby en un negocio serio. Dejas de ser un aficionado para ser
+                        un profesional que conoce sus márgenes. ¡Te la regalamos dentro de tu acceso al Master Pack!
+                    </p>
+                </div>
+
+                <!-- PILAR 2: Diseño -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-indigo-500 transform hover:scale-[1.01] transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-indigo-500 mr-4">🎨</span>
+                        <h3 class="text-3xl font-bold text-gray-900">PILAR 2: EL MASTER-BANCO DE DISEÑOS CURADOS</h3>
+                    </div>
+                    <ul class="list-disc list-inside text-lg text-gray-600 space-y-2">
+                        <li>Más de 1.000 diseños seleccionados en ALTA RESOLUCIÓN y listos para imprimir.</li>
+                        <li>Acceso a colecciones de diseños exclusivos y organizados por temática.</li>
+                        <li>Formatos listos para Sublimación, Vinil Textil y DTF.</li>
+                        <li><strong>Actualizaciones constantes:</strong> se subirán nuevos diseños periódicamente para
+                            mantener tu catálogo siempre actualizado.</li>
+                        <li><strong>Acceso de por vida</strong> a todo el banco de diseños y futuras actualizaciones.
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- PILAR 3: Negocio (PDFs) -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-green-500 transform hover:scale-[1.01] transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-green-500 mr-4">📈</span>
+                        <h3 class="text-3xl font-bold text-gray-900">PILAR 3: MÓDULO 360: LA RUTA DE LA
+                            RENTABILIDAD</h3>
+                    </div>
+                    <p class="text-lg text-gray-600">
+                        7 eBooks en PDF enfocados en la <strong>estrategia de negocio</strong>. Aprenderás:
+                    </p>
+                    <ul class="list-disc list-inside text-lg text-gray-600 space-y-2 ml-6">
+                        <li>Cómo crear una Marca Atractiva y Vendedora.</li>
+                        <li>Estrategias efectivas para Vender en Redes Sociales.</li>
+                        <li>Cálculo avanzado de Costos y Márgenes de Ganancia.</li>
+                    </ul>
+                </div>
+
+                <!-- PILAR 4: Técnica (Videos) -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border-b-4 border-purple-500 transform hover:scale-[1.01] transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-purple-500 mr-4">🎥</span>
+                        <h3 class="text-3xl font-bold text-gray-900">PILAR 4: MASTERCLASS DE ESTAMPADO CON VIDEOS CORTOS
+                        </h3>
+                    </div>
+                    <p class="text-lg text-gray-600">
+                        11 Videos cortos y precisos para dominar tu equipo:
+                    </p>
+                    <ul class="list-disc list-inside text-lg text-gray-600 space-y-2 ml-6">
+                        <li>Tutoriales de sublimación y DTF paso a paso.</li>
+                        <li>Consejos de mantenimiento y cómo evitar errores de novato.</li>
+                        <li>Guía rápida para la preparación de archivos de impresión.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- Sección de Testimonios / Prueba Social (Crucial) -->
+    <!-- ================================================================================= -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">
+                Lo que Dicen Nuestros Emprendedores
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-md border-t-4 border-red-500">
+                    <p class="italic text-gray-700">
+                        "Dejé de regalar mi trabajo. Con la calculadora, subí mis precios un 20% y mis clientes lo
+                        pagaron porque mi producto se ve profesional. ¡La mejor inversión!"
+                    </p>
+                    <p class="mt-4 font-bold text-red-600">- María F., Emprendedora (3 meses de uso)</p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-md border-t-4 border-indigo-500">
+                    <p class="italic text-gray-700">
+                        "El banco de diseños me ahorra 4 horas a la semana. ¡Tengo acceso a calidad premium sin tener
+                        que abrir Illustrator! Mis ventas se duplicaron."
+                    </p>
+                    <p class="mt-4 font-bold text-indigo-600">- Juan P., Sublimador a tiempo completo</p>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-md border-t-4 border-green-500">
+                    <p class="italic text-gray-700">
+                        "El PDF de Estrategia de Marca fue lo que me hacía falta. Ahora sé cómo destacar de la
+                        competencia. El Master Pack es un sistema, no solo archivos."
+                    </p>
+                    <p class="mt-4 font-bold text-green-600">- Carlos R., Nuevo emprendedor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================================= -->
+    <!-- Sección de Precio y Cierre de Venta -->
+    <!-- ================================================================================= -->
+    <section id="precio-final" class="py-16 bg-red-700">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h2 class="text-4xl font-extrabold mb-4">
+                El Momento de Activar tu Rentabilidad es AHORA.
+            </h2>
+            <p class="text-2xl mb-8">
+                Obtén el Sistema <strong>MASTER PACK 360 + la Calculadora Pro Exclusiva</strong>
+            </p>
+
+            <!-- Bloque de Precio (ACTUALIZADO CON EL 80% DE DESCUENTO) -->
+            <div class="bg-white p-8 rounded-2xl shadow-2xl text-gray-900">
+                <p class="text-lg font-semibold line-through text-gray-500">
+                    <!-- PRECIO ANCLADO (Valor original del 100%) -->
+                    Valor Total del Sistema: $245.000 pesos
+                </p>
+                <p class="text-4xl font-bold my-4">
+                    ¡OFERTA DE LANZAMIENTO LIMITADA!
+                </p>
+                <p class="text-3xl font-extrabold text-green-600 mb-2">
+                    ¡Ahorras un 80%!
+                </p>
+                <!-- Precio de Oferta (El 20% que el cliente paga) -->
+                <p class="text-6xl font-extrabold text-red-600">
+                    $49.000
+                </p>
+                <p class="text-lg font-semibold mt-2">
+                    (Paga una vez. Disfruta de por vida.)
+                </p>
+
+                <!-- Botón de Compra Final (CTA solicitado) -->
+                <!-- ********* ENLACE A WHATSAPP ********* -->
+                <a href="https://api.whatsapp.com/send?phone=573202641496&text=Estoy%20listo%2Fa%20para%20obtener%20el%20Master%20Pack."
+                    target="_blank" rel="noopener noreferrer"
+                    class="cta-button inline-flex items-center justify-center mt-6 w-full px-8 py-4 border border-transparent text-2xl font-extrabold rounded-full text-white bg-red-500 hover:bg-red-600">
+                    ¡SÍ, QUIERO ACCEDER para Calcular Bien y Emprender!
+                </a>
+
+                <p class="mt-4 text-sm text-gray-600">Acceso a la descarga inmediata.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================================= -->
+    <!-- Sección de Preguntas Frecuentes (FAQ) - Desplegable -->
+    <!-- ================================================================================= -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-3xl font-bold text-gray-900 mb-10">
+                Preguntas Frecuentes (FAQ)
+            </h2>
+
+            <!-- Contenedor de las preguntas -->
+            <div id="faq-container" class="space-y-4">
+                <!-- Pregunta 1 -->
+                <div class="bg-gray-50 p-4 rounded-lg shadow-md border border-gray-200">
+                    <button
+                        class="w-full text-left flex justify-between items-center font-bold text-lg text-gray-800 focus:outline-none"
+                        onclick="toggleFAQ(this)">
+                        ¿Cómo funciona la Calculadora de Precios?
+                        <span class="text-2xl ml-2 transition-transform duration-200">+</span>
+                    </button>
+                    <div class="faq-content mt-2 text-gray-600 hidden">
+                        <p>
+                            Es una hoja de cálculo en formato HTML súper sencilla. Solo debes ingresar el costo de tus
+                            insumos (mug, tinta, papel), tu costo operativo (por ejemplo, salario por hora) y el margen
+                            de ganancia deseado. ¡Ella te arroja el precio de venta sugerido!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="bg-gray-50 p-4 rounded-lg shadow-md border border-gray-200">
+                    <button
+                        class="w-full text-left flex justify-between items-center font-bold text-lg text-gray-800 focus:outline-none"
+                        onclick="toggleFAQ(this)">
+                        ¿Necesito programas de diseño avanzados?
+                        <span class="text-2xl ml-2 transition-transform duration-200">+</span>
+                    </button>
+                    <div class="faq-content mt-2 text-gray-600 hidden">
+                        <p>
+                            No, ¡ese es el objetivo! Los diseños vienen listos en formato PNG (alta resolución, fondo
+                            transparente) y otros formatos profesionales. Solo tienes que abrir el archivo, imprimir y
+                            sublimar. ¡Cero complicaciones!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="bg-gray-50 p-4 rounded-lg shadow-md border border-gray-200">
+                    <button
+                        class="w-full text-left flex justify-between items-center font-bold text-lg text-gray-800 focus:outline-none"
+                        onclick="toggleFAQ(this)">
+                        ¿Las actualizaciones mensuales tienen costo adicional?
+                        <span class="text-2xl ml-2 transition-transform duration-200">+</span>
+                    </button>
+                    <div class="faq-content mt-2 text-gray-600 hidden">
+                        <p>
+                            No, no tienen costo adicional. <strong>Periódicamente se irán actualizando y subiendo nuevos
+                                diseños</strong> para que siempre tengas contenido fresco, moderno y listo para usar.
+                            Todas las actualizaciones estarán disponibles en la misma carpeta maestra de tu acceso.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Pregunta 4 -->
+                <div class="bg-gray-50 p-4 rounded-lg shadow-md border border-gray-200">
+                    <button
+                        class="w-full text-left flex justify-between items-center font-bold text-lg text-gray-800 focus:outline-none"
+                        onclick="toggleFAQ(this)">
+                        ¿Qué tan rápido recibo el contenido?
+                        <span class="text-2xl ml-2 transition-transform duration-200">+</span>
+                    </button>
+                    <div class="faq-content mt-2 text-gray-600 hidden">
+                        <p>
+                            ¡Inmediato! Apenas se confirme tu pago, recibirás un correo electrónico con el enlace de
+                            descarga a la carpeta maestra que contiene todos los archivos, videos, PDFs y el archivo
+                            HTML de la Calculadora Pro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script para animar el despliegue -->
+    <script>
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector("span");
+
+            // Alternar visibilidad
+            content.classList.toggle("hidden");
+
+            // Rotar el símbolo + a x cuando está abierto
+            if (content.classList.contains("hidden")) {
+                icon.textContent = "+";
+            } else {
+                icon.textContent = "×";
+            }
+        }
+    </script>
+
+
+    <!-- ================================================================================= -->
+    <!-- Pie de Página (Footer) -->
+    <!-- ================================================================================= -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 MASTER PACK Sublima & Emprende. Todos los derechos reservados.</p>
+            <div class="mt-2 space-x-4">
+                <!-- Enlaces legales - Reemplazar con URLs reales -->
+                <a href="#" class="hover:text-red-500 transition duration-200">Términos y Condiciones</a>
+                <a href="#" class="hover:text-red-500 transition duration-200">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================================================================================= -->
+    <!-- Lógica JavaScript -->
+    <!-- ================================================================================= -->
+    <script>
+        // Función para alternar la visibilidad de las respuestas FAQ
+        function toggleFAQ(button) {
+            // Obtiene el contenido de la respuesta (el div oculto)
+            const content = button.nextElementSibling;
+            // Obtiene el icono del botón (el span con el signo +)
+            const icon = button.querySelector('span:last-child');
+
+            // Alterna la clase 'hidden' para mostrar u ocultar el contenido
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.textContent = '−'; // Cambia el icono a un signo menos
+            } else {
+                content.classList.add('hidden');
+                icon.textContent = '+'; // Cambia el icono a un signo más
+            }
+        }
+
+        // --- Lógica del Contador de Urgencia ---
+        // Establece la hora de finalización del contador (ejemplo: 48 horas desde la carga de la página)
+        // Puedes cambiar el número de milisegundos para ajustar la duración
+        const duracionMilisegundos = 48 * 60 * 60 * 1000; // 48 horas en milisegundos
+        const fechaFinal = new Date().getTime() + duracionMilisegundos;
+
+        // Función que actualiza el contador cada segundo
+        const actualizarContador = setInterval(function () {
+            // Obtiene la fecha y hora de hoy
+            const ahora = new Date().getTime();
+
+            // Calcula la distancia entre la fecha final y la fecha actual
+            const distancia = fechaFinal - ahora;
+
+            // Cálculos de tiempo para horas, minutos y segundos
+            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            // Función auxiliar para añadir un cero si el número es menor a 10
+            const formatoDosDigitos = (numero) => (numero < 10 ? '0' : '') + numero;
+
+            // Muestra el resultado en los elementos correspondientes
+            // Se usa document.getElementById para actualizar el contenido
+            document.getElementById("horas").innerHTML = formatoDosDigitos(horas);
+            document.getElementById("minutos").innerHTML = formatoDosDigitos(minutos);
+            document.getElementById("segundos").innerHTML = formatoDosDigitos(segundos);
+
+            // Si el contador termina (distancia < 0), detiene el conteo y muestra un mensaje
+            if (distancia < 0) {
+                clearInterval(actualizarContador); // Detiene la función de intervalo
+                document.getElementById("contador").innerHTML = "<span class='text-2xl font-extrabold'>¡OFERTA EXPIRADA!</span>";
+                // Opcional: podrías ocultar o desactivar los botones de compra aquí
+            }
+        }, 1000); // Se actualiza cada 1000 milisegundos (1 segundo)
+    </script>
+
+</body>
+
+</html>
